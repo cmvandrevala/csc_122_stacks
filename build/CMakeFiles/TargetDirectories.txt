@@ -1,4 +1,0 @@
-/Users/cyrus/Projects/harper/122/csc_122_stack_examples/build/CMakeFiles/my_stack.dir
-/Users/cyrus/Projects/harper/122/csc_122_stack_examples/build/CMakeFiles/1_reverse_a_string.dir
-/Users/cyrus/Projects/harper/122/csc_122_stack_examples/build/CMakeFiles/edit_cache.dir
-/Users/cyrus/Projects/harper/122/csc_122_stack_examples/build/CMakeFiles/rebuild_cache.dir

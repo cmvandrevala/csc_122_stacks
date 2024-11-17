@@ -4,15 +4,14 @@
 
 using namespace std;
 
-int main()
+string reverse(string str)
 {
-  string my_string = "This is my awesome string!";
   string output = "";
   MyStack<char> stack;
 
-  for (int i = 0; i < my_string.length(); i++)
+  for (int i = 0; i < str.length(); i++)
   {
-    stack.push(my_string[i]);
+    stack.push(str.at(i));
   }
 
   while (!stack.is_empty())
@@ -20,5 +19,12 @@ int main()
     output += stack.pop();
   }
 
-  cout << output << endl;
+  return output;
+}
+
+int main()
+{
+  cout << reverse("Panda") << endl;
+  cout << reverse("This is my awesome string!") << endl;
+  cout << reverse("This would have been really useful in the palindrome lab...") << endl;
 }

@@ -19,7 +19,6 @@ public:
     if (indestructible)
     {
       cout << "Indestructible: true" << endl;
-      ;
     }
     else
     {

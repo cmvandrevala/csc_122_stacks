@@ -6,11 +6,26 @@
 
 using namespace std;
 
+vector<string> parse(string expression)
+{
+  vector<string> output;
+  for (int i = 0; i < expression.length(); i++)
+  {
+    if (expression[i] != '(' && expression[i] != ')' && expression[i] != ' ')
+    {
+      string s;
+      s.push_back(expression[i]);
+      output.push_back(s);
+    }
+  }
+  return output;
+}
+
 int postfix_calculator(vector<string> math_expression)
 {
   MyStack<int> stack;
 
-  for (auto i = math_expression.begin(); i < math_expression.end(); i++)
+  for (auto i = math_expression.begin(); i != math_expression.end(); i++)
   {
     if (*i == "+")
     {
@@ -43,9 +58,9 @@ int postfix_calculator(vector<string> math_expression)
 
 int main()
 {
-  vector<string> math_one = {"3", "4", "+", "2", "3", "+", "+"};
-  cout << postfix_calculator(math_one) << endl;
+  string expression = "(* (+ 1 2) (- 7 4))";
 
-  vector<string> math_two = {"3", "4", "+", "2", "*", "28", "/"};
-  cout << postfix_calculator(math_two) << endl;
+  vector<string> parsed_expression = parse(expression);
+  std::reverse(parsed_expression.begin(), parsed_expression.end());
+  cout << postfix_calculator(parsed_expression) << endl;
 }
